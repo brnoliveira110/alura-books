@@ -56,6 +56,8 @@
 
         <!-- Slider main container -->
         <div class="swiper">
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
                 <!-- Slides -->
@@ -68,15 +70,29 @@
                 <div class="swiper-slide"><img src="./img/ReactNative.svg" alt="Livro sobre React Native" /></div>
                 <div class="swiper-slide"><img src="./img/UX.svg" alt="Livro sobre UX" /></div>
             </div>
-            <!-- If we need pagination -->
-            <div class="swiper-pagination"></div>
+
 
             <!-- If we need navigation buttons -->
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
+        </div>
 
-            <!-- If we need scrollbar -->
-            <div class="swiper-scrollbar"></div>
+        <div class="card">
+            <div class="card__descricao">
+                <div class="descricao">
+                    <h3 class="descricao__titulo">Talvez você também se interesse por...</h3>
+                    <h2 class="descricao__titulo-livro">Angular 11 e Firebase</h2>
+                    <p class="descricao__texto">Construindo uma aplicação integrada com a plataforma di Google.</p>
+                </div>
+                <img src="img/Angular2.svg" class="descricao__imagem" alt="Simbolo do Angular">
+            </div>
+            <div class="card__botoes">
+                <ul class="botoes">
+                    <li class="botoes__item"><img src="img/Favoritos.svg" alt="Favoritar livros"></li>
+                    <li class="botoes__item"><img src="img/Sacola.svg" alt="Adicionar no carrinho"></li>
+                </ul>
+                <a href="#" class="botoes__ancora">Saiba mais</a>
+            </div>
         </div>
     </section>
 
@@ -85,6 +101,10 @@
         const swiper = new Swiper('.swiper', {
             spaceBetween: 10,
             slidesPerView: 3,
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'bullets',
+            }
         });
 
 
